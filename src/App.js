@@ -34,6 +34,11 @@ const movies = [
 ];
 
 class App extends Component {
+
+  // Rendor : componentWillMount() -> render() -> componentDidMount()
+
+  // Update componentWillReceiveProps() -> shouldComponentUpdate() -> componentWillUpdate() -> render() -> componentDidMount()
+
   render() {
     return (
       <div className="App">
