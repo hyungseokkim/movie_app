@@ -6,15 +6,15 @@ import './Movie.css';
 function Movie({title, poster, genres, synopsis}){
     return(
         <div className="Movie">
-            <div className="Movie_Columns">
+            <div className="Movie__Column">
             <MoviePoster poster = {poster}/>
             </div>
-            <div className="Movie_Columns">
+            <div className="Movie__Column">
                 <h1>{title}</h1>
-                <div className="Movie_Genres">
+                <div className="Movie__Genres">
                     {genres.map((genre, index) => <MovieGenre genre={genre} key={index} />)}
                 </div>
-                <div className="Movie_Synopsis">
+                <div className="Movie__Synopsis">
                 <LinesEllipsis
                     text={synopsis}
                     maxline='3'
@@ -31,14 +31,14 @@ function Movie({title, poster, genres, synopsis}){
 
 function MoviePoster({poster, alt}){
     return (
-        <img src={poster} alt={alt} title={alt} className="Movie_Poster" />
+        <img src={poster} alt={alt} title={alt} className="Movie__Poster" />
     
     )
 }
 
 function MovieGenre({genre}){
     return (
-        <span className="Movie_Genre">{genre} </span>
+        <span className="Movie__Genre">{genre} </span>
     )
 }
 
